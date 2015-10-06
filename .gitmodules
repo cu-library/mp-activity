@@ -1,0 +1,3 @@
+[submodule "LeafletSlider"]
+	path = LeafletSlider
+	url = https://github.com/dwilhelm89/LeafletSlider.git
