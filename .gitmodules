@@ -1,3 +1,6 @@
 [submodule "LeafletSlider"]
 	path = LeafletSlider
 	url = https://github.com/dwilhelm89/LeafletSlider.git
+[submodule "leaflet-slider"]
+	path = leaflet-slider
+	url = https://github.com/Eclipse1979/leaflet-slider.git
