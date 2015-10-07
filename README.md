@@ -2,7 +2,7 @@
 
 We used data from [OpenParliament.ca](https://openparliament.ca/) and [Leaflet](http://leafletjs.com/) to map MP votes in the most recent session of parliament, session 41-2. Use the slider (created with [Leaflet-Slider](https://github.com/Eclipse1979/leaflet-slider)) to highlight MPs who are more/less present for House votes.
 
-[Members of 41st Parliament, Second Session: Who's Voting?](http://cu-library.github.io/mp-activity/)
+[Members of 41st Parliament, Second Session: Who Voted?](http://cu-library.github.io/mp-activity/)
 
 ## Data
 
