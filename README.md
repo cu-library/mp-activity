@@ -1,7 +1,8 @@
-# mp-activity
-Open Data Book Club: mapping MP activity with Leaflet &amp; data from OpenParliament.ca
+# Open Data Book Club: Mapping MP Votes
 
-## Data 
+We used data from [OpenParliament.ca](https://openparliament.ca/) and [Leaflet](http://leafletjs.com/) to map MP votes in the most recent session of parliament, session 41-2. Use the slider (created with [Leaflet-Slider](https://github.com/Eclipse1979/leaflet-slider)) to highlight MPs who are more/less present for House votes.
+
+## Data
 
 TBD
 
@@ -18,4 +19,3 @@ All GIS functions were carried out in QGIS 2.10.1 unless otherwise noted.
 7. Manually replaced ridiculous symbols in riding names with actual proper letters (ô, é, etc.) using NotePad.
 
 ## Leaflet
-
