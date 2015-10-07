@@ -2,9 +2,13 @@
 
 We used data from [OpenParliament.ca](https://openparliament.ca/) and [Leaflet](http://leafletjs.com/) to map MP votes in the most recent session of parliament, session 41-2. Use the slider (created with [Leaflet-Slider](https://github.com/Eclipse1979/leaflet-slider)) to highlight MPs who are more/less present for House votes.
 
+[Members of 41st Parliament, Second Session: Who's Voting?](http://cu-library.github.io/mp-activity/)
+
 ## Data
 
-TBD
+* [Bulk data](https://openparliament.ca/data-download/) (Postgres `pg_dump` output, updated August 2015) downloaded from OpenParliament.ca
+* Data loaded in PostgreSQL database created w/ [Postgres.app](http://postgresapp.com/)
+* [Aggregated MP vote counts][./session-41-2-MP-votes.sql] in session 41-2 and associated with federal electoral district IDs.
 
 ## GIS workflow
 
