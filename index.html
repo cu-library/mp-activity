@@ -8,11 +8,18 @@
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css" />
     <link rel="stylesheet" href="leaflet-slider/dist/leaflet-slider.css"/>
     <style>
+      body {
+        font-family: Optima,Segoe,"Segoe UI",Candara,Calibri,Arial,sans-serif;
+      }
       #map { height: 800px; border: 1px solid gray; }
     </style>
   </head>
   <body>
     <h2>Members of 41st Parliament, Second Session: Who's Voting?</h2>
+    <p>Data from <a href="https://openparliament.ca/">OpenParliament.ca</a> mapped
+      with <a href="http://leafletjs.com/">Leaflet</a> to show MP attendance at
+      467 votes held in the second session of the 41st parliament.</p>
+    <p>Details on <a href="https://github.com/cu-library/mp-activity">Github</a>.
     <div id="map"></div>
     <script>
     var map = L.map('map').setView([60.0, -101.84], 4);
