@@ -1,6 +1,10 @@
 # mp-activity
 Open Data Book Club: mapping MP activity with Leaflet &amp; data from OpenParliament.ca
 
+## Data 
+
+TBD
+
 ## GIS workflow
 
 All GIS functions were carried out in QGIS 2.10.1 unless otherwise noted.
@@ -12,3 +16,6 @@ All GIS functions were carried out in QGIS 2.10.1 unless otherwise noted.
 5. Joined riding data to shapefile.<br>
 6. GeoJSON exported from QGIS did not function properly with Leaflet code so exported from QGIS as KML, uploaded to CartoDB, deleted extra KML fields, exported as GeoJSON that actually worked.<br>
 7. Manually replaced ridiculous symbols in riding names with actual proper letters (ô, é, etc.) using NotePad.
+
+## Leaflet
+
