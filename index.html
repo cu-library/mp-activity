@@ -34,10 +34,10 @@
     	orientation:'horizontal',
     	collapsed: false,
     	increment: true,
-    	min: 0,
+    	min: 1,
     	max: 467,
     	step: 1,
-    	value: 0
+    	value: 467
     }
 
     $.getJSON('session-41-2-absent-mps.geojson', function(data){
@@ -59,7 +59,7 @@
     				'<h3>' + feature.properties.member + '</h3>' +
     				'<img src="' + feature.properties.image_url + '"/>' +
     				'<p>' + feature.properties.party + ', ' + feature.properties.enname + '</p>' +
-    				'<p>Voted: <strong>' + (467 - feature.properties.absent_vot) + '</strong></p>';
+    				'<p>Voted: <strong>' + (467-feature.properties.absent_vot) + '</strong></p>';
     			if (feature.properties.change) {
     				popupContent += '<p>' + feature.properties.change + '</p>';
     			}
@@ -72,7 +72,7 @@
     	slider = L.control.slider(
     		function(value){
     			ridingsLayer.eachLayer(function(layer){
-    				var fillOpacity = ((467-layer.feature.properties.absent_vot) <= value ? '.5' : '.15');
+    				var fillOpacity = ((467-layer.feature.properties.absent_vot) > value ? '.5' : '.15');
     	    	layer.setStyle({fillOpacity :fillOpacity});
     			});
     		},
