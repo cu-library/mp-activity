@@ -1,4 +1,4 @@
-<html>
+﻿<html>
   <head>
     <title>Members of 41st Parliament, Second Session</title>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -36,7 +36,7 @@
     	min: 0,
     	max: 467,
     	step: 1,
-    	value: 467
+    	value: 0
     }
 
     $.getJSON('session-41-2-absent-mps.geojson', function(data){
@@ -71,7 +71,7 @@
     	slider = L.control.slider(
     		function(value){
     			ridingsLayer.eachLayer(function(layer){
-    				var fillOpacity = (layer.feature.properties.absent_vot >= value ? '.5' : '.1');
+    				var fillOpacity = (layer.feature.properties.absent_vot <= value ? '.1' : '.5');
     	    	layer.setStyle({fillOpacity :fillOpacity});
     			});
     		},
