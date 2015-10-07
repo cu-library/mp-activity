@@ -1,7 +1,6 @@
 ﻿<html>
   <head>
-    <title>Members of 41st Parliament, Second Session</title>
-    <h2>Members of 41st Parliament, Second Session: Absent Votes</h2>
+    <title>Members of 41st Parliament, Second Session: Who's Voting in the House?</title>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.js"></script>
@@ -13,6 +12,7 @@
     </style>
   </head>
   <body>
+    <h2>Members of 41st Parliament, Second Session: Who's Voting?</h2>
     <div id="map"></div>
     <script>
     var map = L.map('map').setView([60.0, -101.84], 4);
@@ -59,7 +59,7 @@
     				'<h3>' + feature.properties.member + '</h3>' +
     				'<img src="' + feature.properties.image_url + '"/>' +
     				'<p>' + feature.properties.party + ', ' + feature.properties.enname + '</p>' +
-    				'<p>Absent votes: <strong>' + feature.properties.absent_vot + '</strong></p>';
+    				'<p>Voted: <strong>' + (467 - feature.properties.absent_vot) + '</strong></p>';
     			if (feature.properties.change) {
     				popupContent += '<p>' + feature.properties.change + '</p>';
     			}
@@ -72,7 +72,7 @@
     	slider = L.control.slider(
     		function(value){
     			ridingsLayer.eachLayer(function(layer){
-    				var fillOpacity = (layer.feature.properties.absent_vot <= value ? '.1' : '.5');
+    				var fillOpacity = ((467-layer.feature.properties.absent_vot) <= value ? '.5' : '.15');
     	    	layer.setStyle({fillOpacity :fillOpacity});
     			});
     		},
