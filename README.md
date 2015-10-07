@@ -8,7 +8,7 @@ We used data from [OpenParliament.ca](https://openparliament.ca/) and [Leaflet](
 
 * [Bulk data](https://openparliament.ca/data-download/) (Postgres `pg_dump` output, updated August 2015) downloaded from OpenParliament.ca
 * Data loaded in PostgreSQL database created w/ [Postgres.app](http://postgresapp.com/)
-* [Aggregated MP vote counts][./session-41-2-MP-votes.sql] in session 41-2 and associated with federal electoral district IDs.
+* [Aggregated MP vote counts](./session-41-2-MP-votes.sql) in session 41-2 and associated with federal electoral district IDs.
 
 ## GIS workflow
 
@@ -23,3 +23,7 @@ All GIS functions were carried out in QGIS 2.10.1 unless otherwise noted.
 7. Manually replaced ridiculous symbols in riding names with actual proper letters (ô, é, etc.) using NotePad.
 
 ## Leaflet
+
+* Create map, add tile layer, and load GeoJSON.
+* For each FED in GeoJSON data, apply style according to party colour & attach popup w/ MP details.
+* Add a slider control to filter MPs by vote attendance.
