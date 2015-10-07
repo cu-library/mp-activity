@@ -27,3 +27,8 @@ All GIS functions were carried out in QGIS 2.10.1 unless otherwise noted.
 * Create map, add tile layer, and load GeoJSON.
 * For each FED in GeoJSON data, apply style according to party colour & attach popup w/ MP details.
 * Add a slider control to filter MPs by vote attendance.
+
+## To do
+* add animation to ridings updated on slider change. (Huge differences in riding sizes makes changes in small ridings hard to see.)
+* add information about votes where MP is absent. (Some House votes more important than [others](https://openparliament.ca/bills/41-2/S-218/).)
+* map data sets showing most agreeable / contrarian MPs (most/least likely to vote on party lines)
