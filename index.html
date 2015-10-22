@@ -17,7 +17,7 @@
   <body>
     <h2>Members of 41st Parliament, Second Session: Who Voted?</h2>
     <p>Data from <a href="https://openparliament.ca/">OpenParliament.ca</a> mapped
-      with <a href="http://leafletjs.com/">Leaflet</a> to show MP attendance at
+      with <a href="http://leafletjs.com/">Leaflet</a> to show MP participation in
       467 votes held in the second session of the 41st parliament.</p>
     <p>Details on <a href="https://github.com/cu-library/mp-activity">Github</a>.
     <div id="map"></div>
@@ -67,7 +67,8 @@
     				'<h3>' + feature.properties.member + '</h3>' +
     				'<img src="' + feature.properties.image_url + '"/>' +
     				'<p>' + feature.properties.party + ', ' + feature.properties.enname + '</p>' +
-    				'<p>Voted: <strong>' + (467-feature.properties.absent_vot) + '</strong></p>';
+    				'<p>Votes present: <strong>' + (467-feature.properties.absent_vot) + '</strong><br/>' +
+            'Absent/abstained: <strong>' + feature.properties.absent_vot + '</strong></p>';
     			if (feature.properties.change) {
     				popupContent += '<p>' + feature.properties.change + '</p>';
     			}
