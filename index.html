@@ -81,7 +81,7 @@
     	slider = L.control.slider(
     		function(value){
     			ridingsLayer.eachLayer(function(layer){
-    				var fillOpacity = ((467-layer.feature.properties.absent_vot) > value ? '.5' : '.15');
+    				var fillOpacity = ((467-layer.feature.properties.absent_vot) >= value ? '.5' : '.15');
     	    			layer.setStyle({fillOpacity :fillOpacity});
     			});
     		},
