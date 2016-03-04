@@ -51,14 +51,14 @@
     		style: function(feature){
     			var bgColor;
     			switch (feature.properties.party) {
-    				case 'Conservative': 	bgColor = '#000066'; break;
-    				case 'Liberal':				bgColor = '#E60000'; break;
-    				case 'NDP':						bgColor = '#FF6600'; break;
-    				case 'Green':					bgColor = '#009933'; break;
-    				case 'Bloc':					bgColor = '#33CCFF'; break;
-		        case 'Independent': 	bgColor = '#2B2B2B'; break;
-            case 'Forces et Democratie': 	bgColor = '#E6E65C'; break;
-    				default: 							bgColor = '#999966';
+    				case 'Conservative': 		bgColor = '#000066'; break;
+    				case 'Liberal':			bgColor = '#E60000'; break;
+    				case 'NDP':			bgColor = '#FF6600'; break;
+    				case 'Green':			bgColor = '#009933'; break;
+    				case 'Bloc':			bgColor = '#33CCFF'; break;
+				case 'Independent': 		bgColor = '#2B2B2B'; break;
+            			case 'Forces et Democratie': 	bgColor = '#E6E65C'; break;
+    				default: 			bgColor = '#999966';
     			}
     			return {weight: 2, color: bgColor, fillColor: bgColor, fillOpacity: 0.1};
     		},
@@ -68,7 +68,7 @@
     				'<img src="' + feature.properties.image_url + '"/>' +
     				'<p>' + feature.properties.party + ', ' + feature.properties.enname + '</p>' +
     				'<p>Votes present: <strong>' + (467-feature.properties.absent_vot) + '</strong><br/>' +
-            'Absent/abstained: <strong>' + feature.properties.absent_vot + '</strong></p>';
+        			'Absent/abstained: <strong>' + feature.properties.absent_vot + '</strong></p>';
     			if (feature.properties.change) {
     				popupContent += '<p>' + feature.properties.change + '</p>';
     			}
@@ -82,7 +82,7 @@
     		function(value){
     			ridingsLayer.eachLayer(function(layer){
     				var fillOpacity = ((467-layer.feature.properties.absent_vot) > value ? '.5' : '.15');
-    	    	layer.setStyle({fillOpacity :fillOpacity});
+    	    			layer.setStyle({fillOpacity :fillOpacity});
     			});
     		},
     		sliderProperties
